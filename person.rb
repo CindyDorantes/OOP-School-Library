@@ -25,6 +25,3 @@ class Person
   end
 end
 
-person = Person.new(33, "cindy")
-puts person
-puts person.can_use_services?
