@@ -1,12 +1,9 @@
-require_relative ("person.rb")
+require_relative('person')
 
 class Teacher
-  def initialize(specialization, age, name = "Unknown", parent_permission = true)
+  def initialize(specialization, age, name = 'Unknown', parent_permission: true)
+    super(age, name, parent_permission)
     @specialization = specialization
-    @name = name
-    @age = age
-    @parent_permission = parent_permission    
-    @id = Random.rand (1..1000)    
   end
 
   def can_use_services?
