@@ -6,7 +6,7 @@ class Person
     @id = Random.rand(1..1000)
   end
 
-  attr_reader :id
+  attr_reader :id, :parent_permission
   attr_accessor :name, :age
 
   def can_use_services?
@@ -20,3 +20,6 @@ class Person
     age >= 18
   end
 end
+
+# person = Person.new(33, "cindy")
+# puts person.name
