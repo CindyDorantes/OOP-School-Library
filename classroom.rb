@@ -1,13 +1,14 @@
 class Classroom
+  attr_reader :students
   attr_accessor :label
 
-  def initialize
-    @label = Random.rand(1..100)
+  def initialize(label)
+    @label = label
     @students = []
   end
 
   def add_student(student)
     @students.push(student)
-    student.classroom(self)
+    student.classrooms(self)
   end
 end
