@@ -10,8 +10,11 @@ A tool created with Ruby to record what books are in the library and who borrows
 
 Clone this repo: https://github.com/CindyDorantes/OOP-School-Library.git
 
-- Open irb on comand line.
-- Run the code 
+- Go to the repo directory from the comand line.
+- Run 
+```
+ruby main.rb
+```
 
 ## Authors
 

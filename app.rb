@@ -39,11 +39,11 @@ class App
 
     @rentals.each do |rental|
       if rental.person.id == person_id
-        puts "\nDate: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}"
+        puts "\nDate: #{rental.date}, Book: \"#{rental.book.title}\" by #{rental.book.author}"
       end
     end
   end
-  
+
   def create_student
     print 'Age:'
     age = gets.chomp
@@ -71,7 +71,7 @@ class App
     title = gets.chomp
     print 'Author: '
     author = gets.chomp
-    @books << Book.new(title,author)
+    @books << Book.new(title, author)
     puts 'Book created successfully'
   end
 
@@ -81,15 +81,14 @@ class App
     end
 
     puts 'Select a book from the following list by number'
-    self.list_books
+    list_books
     book_index = gets.chomp.to_i
     puts 'Select a person from the following list by number (not id)'
-    self.list_people
+    list_people
     person_index = gets.chomp.to_i
     puts 'Enter date (yyyy-mm-dd):'
     date = gets.chomp
     @rentals << Rental.new(date, @books[book_index], @people[person_index])
     puts 'Rental created successfully'
   end
-
 end
