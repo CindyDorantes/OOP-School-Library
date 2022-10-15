@@ -31,6 +31,18 @@ class App
       end
     end
   end
+
+  def list_rentals_by_id
+    print 'ID of the person:'
+    person_id = gets.chomp.to_i
+    print 'Rentals:'
+
+    @rentals.each do |rental|
+      if rental.person.id == person_id
+        puts "\nDate: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}"
+      end
+    end
+  end
   
   def create_student
     print 'Age:'
