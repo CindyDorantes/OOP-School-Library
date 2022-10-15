@@ -10,6 +10,3 @@ class Teacher < Person
     true
   end
 end
-
-teacher = Teacher.new('Math', 33, parent_permission: false)
-puts teacher.parent_permission
