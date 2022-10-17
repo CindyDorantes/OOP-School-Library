@@ -10,3 +10,14 @@ class Teacher < Person
     true
   end
 end
+
+def create_teacher(people)
+  print 'Age: '
+  age = gets.chomp
+  print 'Name: '
+  name = gets.chomp
+  print 'Specialization: '
+  specialization = gets.chomp
+  people << Teacher.new(specialization, age, name)
+  puts 'Teacher created successfully'
+end

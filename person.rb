@@ -30,3 +30,13 @@ class Person < Nameable
     age >= 18
   end
 end
+
+def list_people(people)
+  if people.length.zero?
+    puts 'There are not people registered in the system'
+  else
+    people.each_with_index do |person, idx|
+      puts "#{idx}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    end
+  end
+end

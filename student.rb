@@ -16,3 +16,14 @@ class Student < Person
     "¯\(ツ)/¯"
   end
 end
+
+def create_student(people)
+  print 'Age:'
+  age = gets.chomp
+  print 'Name:'
+  name = gets.chomp
+  print 'Has parent permission?[Y/N]:'
+  permission = gets.chomp
+  people << Student.new(age, name, parent_permission: permission.upcase == 'Y')
+  puts 'Student created successfully'
+end
