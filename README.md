@@ -24,6 +24,16 @@ ruby main.rb
 - Twitter: [@CindyDorantes10](https://twitter.com/CindyDorantes10)
 - LinkedIn: [Cindy Melisa Dorantes Sánchez](https://www.linkedin.com/in/cindydorantessanchez/)
 
+👤 **Diego Mero**
+- GitHub: [@DiegoMero](https://github.com/DiegoMero)
+- Twitter: [@Dimero18](https://twitter.com/Dimero18)
+- LinkedIn: [Diego](https://www.linkedin.com/in/diego-mero/)
+
+👤 **Maximiliano Ungredda**
+GitHub: [@renercrows](https://github.com/renercrows)
+Twitter: [@renercrows](https://twitter.com/renercrows)
+LinkedIn: [Maximiliano Ungredda] (www.linkedin.com/in/maximiliano-ungredda)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
