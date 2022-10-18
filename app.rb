@@ -6,5 +6,4 @@ class App
     @people = []
     @rentals = []
   end
-
 end

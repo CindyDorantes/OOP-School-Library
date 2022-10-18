@@ -8,16 +8,6 @@ class Book
   end
 end
 
-class Book
-  attr_accessor :title, :author, :rentals
-
-  def initialize(title, author)
-    @title = title
-    @author = author
-    @rentals = []
-  end
-end
-
 def create_book(books)
   print 'Title: '
   title = gets.chomp
