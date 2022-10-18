@@ -1,4 +1,5 @@
 require_relative './person'
+require_relative './require_inputs'
 
 class Student < Person
   attr_reader :classroom
@@ -15,4 +16,10 @@ class Student < Person
   def play_hooky
     "¯\(ツ)/¯"
   end
+end
+
+def create_student(people)
+  age, name, permission = grab_data_student
+  people << Student.new(age, name, parent_permission: permission.upcase == 'Y')
+  puts 'Student created successfully'
 end
