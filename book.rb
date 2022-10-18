@@ -1,3 +1,5 @@
+require_relative './require_inputs'
+
 class Book
   attr_accessor :title, :author, :rentals
 
@@ -9,10 +11,7 @@ class Book
 end
 
 def create_book(books)
-  print 'Title: '
-  title = gets.chomp
-  print 'Author: '
-  author = gets.chomp
+  title, author = grab_data_book
   books << Book.new(title, author)
   puts 'Book created successfully'
 end

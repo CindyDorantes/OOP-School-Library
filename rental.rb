@@ -1,5 +1,6 @@
 require_relative './book'
 require_relative './person'
+require_relative './require_inputs'
 
 class Rental
   attr_accessor :date, :book, :person
@@ -21,23 +22,13 @@ def create_rental(app)
     return puts 'There are not any person and/or book in the system. Rental cannot be created'
   end
 
-  puts 'Select a book from the following list by number'
-  list_books(books)
-  book_index = gets.chomp.to_i
-  puts 'Select a person from the following list by number (not id)'
-  list_people(people)
-  person_index = gets.chomp.to_i
-  puts 'Enter date (yyyy-mm-dd):'
-  date = gets.chomp
+  book_index, person_index, date = grab_data_rental(books, people)
   rentals << Rental.new(date, books[book_index], people[person_index])
   puts 'Rental created successfully'
 end
 
 def list_rentals_by_id(rentals)
-  print 'ID of the person:'
-  person_id = gets.chomp.to_i
-  print 'Rentals:'
-
+  person_id = grab_rental_id
   rentals.each do |rental|
     if rental.person.id == person_id
       puts "\nDate: #{rental.date}, Book: \"#{rental.book.title}\" by #{rental.book.author}"

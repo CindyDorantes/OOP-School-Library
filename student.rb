@@ -1,4 +1,5 @@
 require_relative './person'
+require_relative './require_inputs'
 
 class Student < Person
   attr_reader :classroom
@@ -18,12 +19,7 @@ class Student < Person
 end
 
 def create_student(people)
-  print 'Age:'
-  age = gets.chomp
-  print 'Name:'
-  name = gets.chomp
-  print 'Has parent permission?[Y/N]:'
-  permission = gets.chomp
+  age, name, permission = grab_data_student
   people << Student.new(age, name, parent_permission: permission.upcase == 'Y')
   puts 'Student created successfully'
 end

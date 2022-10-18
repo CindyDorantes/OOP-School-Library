@@ -1,4 +1,5 @@
 require_relative('person')
+require_relative './require_inputs'
 
 class Teacher < Person
   def initialize(specialization, age, name = 'Unknown', parent_permission: true)
@@ -12,12 +13,7 @@ class Teacher < Person
 end
 
 def create_teacher(people)
-  print 'Age: '
-  age = gets.chomp
-  print 'Name: '
-  name = gets.chomp
-  print 'Specialization: '
-  specialization = gets.chomp
+  age, name, specialization = grab_data_teacher
   people << Teacher.new(specialization, age, name)
   puts 'Teacher created successfully'
 end
