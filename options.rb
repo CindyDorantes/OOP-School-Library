@@ -3,6 +3,7 @@ require_relative './book'
 require_relative './student'
 require_relative './teacher'
 require_relative './person'
+require_relative './store_data'
 
 @options = [
   'Please choose an option by entering a number:',
@@ -42,6 +43,7 @@ def options(app, exit_button)
       list_rentals_by_id(app.rentals)
     when 7
       puts 'Thanks for using the School Library System. Goodbye'
+      save_data(app.books)
       exit_button = false
     end
   end
