@@ -26,6 +26,7 @@ def options(app, exit_button)
       list_books(app.books)
     when 2
       list_people(app.people)
+      p app.people
     when 3
       puts 'Do you wants to create a student [1] or a teacher [2]? Input the number'
       people_choice = gets.chomp.to_i
@@ -43,7 +44,8 @@ def options(app, exit_button)
       list_rentals_by_id(app.rentals)
     when 7
       puts 'Thanks for using the School Library System. Goodbye'
-      save_data(app.books)
+      save_books(app.books)
+      save_people(app.people)
       exit_button = false
     end
   end
