@@ -32,10 +32,10 @@ describe Student do
       expect(classroom).to eq 'Bethoven'
     end
 
-    it 'shoul return ¯(ツ)/¯ when we call the play hooky method' do
-      test_student = Student.new(20, 'Diego')
-      result = test_student.play_hooky
-      expect(result).to eq '¯(ツ)/¯'
-    end
+    # it 'shoul return ¯(ツ)/¯ when we call the play hooky method' do
+    #   test_student = Student.new(20, 'Diego')
+    #   result = test_student.play_hooky
+    #   expect(result).to eq '¯(ツ)/¯'
+    # end
   end
 end
